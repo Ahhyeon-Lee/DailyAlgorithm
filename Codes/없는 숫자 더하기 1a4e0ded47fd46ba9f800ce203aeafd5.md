@@ -1,11 +1,6 @@
-# 없는 숫자 더하기
-
-날짜: January 14, 2023
-태그: level 1
-
 ## 없는 숫자 더하기
+![image](https://user-images.githubusercontent.com/68845653/212447703-144c7654-6e48-4d9a-8edd-f5ae96638a6e.png)
 
-![Untitled](%E1%84%8B%E1%85%A5%E1%86%B9%E1%84%82%E1%85%B3%E1%86%AB%20%E1%84%89%E1%85%AE%E1%86%BA%E1%84%8C%E1%85%A1%20%E1%84%83%E1%85%A5%E1%84%92%E1%85%A1%E1%84%80%E1%85%B5%201a4e0ded47fd46ba9f800ce203aeafd5/Untitled.png)
 
 ## 나의 풀이
 
