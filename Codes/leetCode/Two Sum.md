@@ -81,17 +81,15 @@ class Solution {
 class Solution {
     fun twoSum(nums: IntArray, target: Int): IntArray {
         val map = HashMap<Int, Int>()
-        var foundIndex = intArrayOf()
         nums.forEachIndexed { index, value ->
             val gap = target - value
             if (map.get(gap) != null) {
-                foundIndex = intArrayOf(index, map[gap]!!)
-                return foundIndex
+                return intArrayOf(index, map[gap]!!)
             } else {
                 map[value] = index
             }
         }
-        return foundIndex
+        return intArrayOf()
     }
 }
 ```
