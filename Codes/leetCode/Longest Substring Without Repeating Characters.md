@@ -50,7 +50,7 @@ fun lengthOfLongestSubstring(string: String): Int {
     if (string.length == 0) return 0
     var max = 0
     var sb = StringBuilder().apply { string[0] }
-    string.forEachIndexed { index, s ->
+    string.forEach { s ->
         if (sb.contains(s)) {
             sb.delete(0, sb.indexOf(s)+1)
         }
