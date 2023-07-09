@@ -58,7 +58,10 @@ Acceptance Rate
 
 ### Solution
 
-- This solution could have O(n) time complexity in worst case.
+- In this problem, the fact is that if the left index is smaller than the right index, the nums is sorted and the smallest num is index 0 in nums.
+
+- The first solution could have O(n) time complexity in worst case.
+- Because it compares all the elements until meeting the smallest numbers except in case that the smallest number is at index 0.
 
 ```kotlin
 class Solution {
@@ -77,6 +80,40 @@ class Solution {
             }
         }
         return min
+    }
+}
+```
+
+- Second solution is using binary search.
+- In sorted array 0 index is the smallest number.
+- In rotated array if the m(middle) index is bigger than l (left) index, the left portion is sorted and is bigger than right portion. So we should move l index to m + 1 to find in smaller portion.
+- In contrast if the the l index is bigger than m index, the smallest number is in the left portion. So we should move the r(right) index to m - 1.
+- Above rules are the point of this solution using binary search and we’ll save the smallest number in `res` and keep comparing it with smaller one.
+
+```kotlin
+class Solution {
+    fun findMin(nums: IntArray): Int {
+        var l = 0
+        var r = nums.lastIndex
+        var m = (l + r) / 2
+        var res = nums[m]
+        
+        while (l <= r) {
+            if (nums[l] <= nums[r]){ 
+                res = Math.min(res, nums[l])
+                break
+            }
+            
+            if (nums[l] <= nums[m]) {
+               l = m + 1
+            } else {
+               r = m - 1
+            }
+            m = (l + r) / 2
+            res = Math.min(res, nums[m])
+        }
+        
+        return res
     }
 }
 ```
