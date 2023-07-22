@@ -38,7 +38,15 @@ Output: []
 **Follow up:** A linked list can be reversed either iteratively or recursively. Could you implement both?
 
 ### Solution
+- ListNode in the problem is LinkedList which has next node’s reference.
+![KakaoTalk_Photo_2023-07-22-23-18-27](https://github.com/Ahhyeon-Lee/DailyAlgorithm/assets/68845653/8e4243c2-09b9-4815-9a64-44f8d7fe1c59)
+- `head` has a reference in the direction of the black arrow like in above picture, but what we need to do is to change the reference of `next` to the direction of blue arrow in the picture.
+- Therefore we need to save the previous node in `prev` and set it to current node’s `next`.
+1. At first, initialize the `prev` to null and set it the first node’s `next`.
+2. Then update `prev` to first node and set it to second node’s `next` when we go through the `head`.
+3. `curr`, the current value of head’s loop, is updated to second node, which was `next` of first node.
 
+After going through the process above, prev will have reversed ListNode of head. Then we return it.
 ```kotlin
 /**
  * Example:
