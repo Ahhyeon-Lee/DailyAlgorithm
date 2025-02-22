@@ -1,5 +1,6 @@
 ## Rule
 - 주 2 문제 이상 풀기
+- https://www.teamblind.com/post/New-Year-Gift---Curated-List-of-Top-75-LeetCode-Questions-to-Save-Your-Time-OaM1orEU
 
 ## Histroy
 - 감을 되살리기 위한 알고리즘 리챌린지 (2025.02.22 ~)
